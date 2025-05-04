@@ -1,0 +1,2 @@
+Günlük 0.02 kg CO₂ Sunucu odasında görevli bu kişi, soğutma sistemini dış hava sıcaklığına duyarlı çalışacak şekilde programlamış. Yılın büyük kısmında doğal havalandırmayla serinliği sağlıyor. Veri aktarımlarını sıkıştırma algoritmaları kullanarak minimum bant genişliğinde yapıyor; bu da sunucu enerji tüketimini azaltıyor. Tüm sunucuların güç kaynaklarını akıllı yönetim panellerine bağlayarak geceleri otomatik olarak kapatılmasını sağlıyor. Böylece hem altyapı maliyetlerini düşürüyor hem de karbon ayak izini kontrol altında tutuyor.
+

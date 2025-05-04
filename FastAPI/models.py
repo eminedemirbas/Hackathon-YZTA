@@ -18,6 +18,6 @@ def get_rozet(score: float) -> dict:
     if score < 50:
         return {"title": "Çevreye Zarar Veren", "emoji": "🥀"}
     elif score < 80:
-        return {"title": "Yeşeren Yolcu", "emoji": "🌿"}
+        return {"title": "Yeşeren Yolcu", "emoji": "🌱"}
     else:
-        return {"title": "Gezegen Koruyucusu", "emoji": "🌸"}
+        return {"title": "Gezegen Koruyucusu", "emoji": "🌳"}

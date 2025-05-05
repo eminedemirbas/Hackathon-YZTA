@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Arkadia Register</title>
+  <link rel="stylesheet" href="../static/css/register_style.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="left-section">
+      <img src="../img/plantape.png" alt="Recycling Tape" />
+      <div class="text-overlay">
+        <h2>İleriye İz Bırak, Çöp Değil!</h2>
+        <p>Dönüştür</p>
+      </div>
+    </div>
+    <div class="right-section">
+      <div class="logo">Arkadia</div>
+      <h3>Welcome to lorem..!</h3>
+      <div class="toggle-buttons">
+        <button class="toggle" id="login">Login</button>
+        <button class="toggle active" id="register">Register</button>
+      </div>
+      <form>
+        <input type="email" placeholder="Enter your Email Address" />
+        <input type="text" placeholder="Enter your User name" />
+        <div class="password-wrapper">
+          <input type="password" placeholder="Enter your Password" id="password" />
+          <span class="toggle-password" onclick="togglePassword()">👁️</span>
+        </div>
+        <button class="submit-btn">Register</button>
+      </form>
+    </div>
+  </div>
+  <script src="../static/jss/register_script.js"></script>
+</body>
+</html>

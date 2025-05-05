@@ -1,0 +1,118 @@
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #fefefe;
+  display: flex;
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+}
+
+.left-section {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+}
+
+.left-section img {
+  width: 100%;
+  object-fit: cover;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+.text-overlay {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: white;
+  font-weight: bold;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+}
+
+.right-section {
+  flex: 1;
+  padding: 80px 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #fff;
+  box-sizing: border-box;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: right;
+  margin-bottom: 30px;
+}
+
+.toggle-buttons {
+  display: flex;
+  margin: 20px 0;
+}
+
+.toggle {
+  flex: 1;
+  padding: 10px;
+  background-color: #f4eade;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  color: #333;
+  transition: 0.3s;
+}
+
+.toggle.active {
+  background-color: #b79e7f;
+  color: white;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 6px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+.password-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.password-wrapper input {
+  padding-right: 40px; /* ikon için yer aç */
+  box-sizing: border-box;
+}
+
+.toggle-password {
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.submit-btn {
+  padding: 12px;
+  background-color: #b79e7f;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+}

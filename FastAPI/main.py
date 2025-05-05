@@ -4,6 +4,9 @@ from scoring import calculate_score
 from users import User, register_user, authenticate_user
 from auth import create_access_token, verify_token
 from fastapi.security import OAuth2PasswordRequestForm
+from advice import get_gemini_advice
+from gemini_api import get_gemini_response
+
 
 app = FastAPI()
 
@@ -33,5 +36,17 @@ async def register(user: User):
 async def login(form_data: OAuth2PasswordRequestForm = Depends()):
     if not await authenticate_user(form_data.username, form_data.password):
         raise HTTPException(status_code=401, detail="Invalid username or password")
-    token = create_access_token(data={"sub": form_data.username})
+    token = await create_access_token(data={"sub": form_data.username})
     return {"access_token": token, "token_type": "bearer"}
+
+@app.post("/gemini-advice")
+async def generate_advice(user_data: UserData):
+    try:
+        score = calculate_score(user_data.car_km, user_data.daily_water_use, user_data.plastic_use)
+        prompt_data = get_gemini_advice(user_data, score)
+        prompt = prompt_data["prompt"]
+        response = await get_gemini_response(prompt)
+        return {"score": score, "advice": response}
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+

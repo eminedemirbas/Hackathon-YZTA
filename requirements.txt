@@ -9,3 +9,6 @@ passlib[bcrypt]
 python-jose
 python-multipart
 python-dotenv
+tensorflow==2.15.1
+tensorflow-hub==0.16.1
+tensorflow-text==2.15.0

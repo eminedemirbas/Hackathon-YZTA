@@ -43,7 +43,7 @@ nav a {
   height: 40px;
   border-radius: 50%;
   overflow: hidden;
-  border: 2px solid #293133; /
+  border: 0px solid #293133; /
   display: flex;
   align-items: center;
   justify-content: center;
@@ -81,24 +81,18 @@ nav a {
   color: #444;
   max-width: 760px;
 }
-.container1 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0 1.25rem;
-    margin: 0 auto;
-    max-width: 100%;
-
-
+.container1, .container2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 60px; /* resim ile metin arası boşluk */
+  padding: 60px 120px;
+  max-width: 1440px;
+  margin: 0 auto;
 }
-.container2 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0 1.25rem;
-    margin: 0 auto;
-    max-width: 100%;
 
+.container2 {
+  flex-direction: row-reverse; /* resim sağda olacaksa */
 }
 .divider {
     margin-bottom: 1.25rem;

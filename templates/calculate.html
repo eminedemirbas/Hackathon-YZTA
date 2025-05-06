@@ -6,6 +6,53 @@
   <title>Karbon Ayak İzi - Beslenme Alışkanlıkları</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../static/css/style.css">
+  <style>
+    .impact-card-container {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .impact-card {
+      background-color: #ffffff;
+      padding: 20px;
+      border-radius: 8px;
+      width: 250px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    .impact-card img {
+      height: 48px;
+      margin-bottom: 12px;
+    }
+
+    .impact-card label {
+      display: block;
+      font-weight: 500;
+      margin-bottom: 8px;
+    }
+
+    .impact-card input {
+      width: 80%;
+      padding: 8px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+      text-align: center;
+    }
+
+    .impact-card span {
+      display: block;
+      margin-top: 4px;
+      color: #555;
+    }
+
+    .impact-header {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+  </style>
 </head>
 <body>
 
@@ -14,24 +61,50 @@
       <img src="../img/logo.png" alt="Logo" style="height: 32px;">
     </div>
     <nav>
-      <a href="#">Anasayfa</a>
+      <a href="heropage_index.html">Anasayfa</a>
       <a href="#">Rozetler</a>
-      <a href="#">Skor</a>
-      <a href="#">Biz Kimiz</a>
+      <a href="calculate.html">Skor</a>
+      <a href="#">Hakkımızda</a>
     </nav>
-
   </header>
 
-  <section class="section2">
+  <section class="section3">
     <div class="question-block">
       <h2>ARCADIA: Günlük Karbon Ayak İzi Düzeyi</h2>
       <p>Gün içinde beslenme alışkanlıklarınızı, ulaşım şeklinizi ve mesafenizi, atıkları ayrıştırma düzeyinizi, paketli-işlenmiş gıda tüketim oranınızı, konut tipiniz, elektrik ve enerji kullanma oranınız gibi günlük tüketim alışkanlıklarınız ile ilgili bilgileri yazınız. <br>
-         (Örneğin: "Bir öğünümde et ve süt ürünleri ile beslendim, Ulaşımı aracımla sağladım, Yemek hazırlamaya zamanım olmadığı için diğer öğünlerimde paketli ürünler yedim")</p>
-      <textarea class="input-text-style" rows="6" placeholder="Alışkanlıklarınızı yazınız..."></textarea>
+         </p> <br>
+      <p> (Örneğin: "Bir öğünümde et ve süt ürünleri ile beslendim, Ulaşımı aracımla sağladım, Yemek hazırlamaya zamanım olmadığı için diğer öğünlerimde paketli ürünler yedim")</p>
+      <textarea class="input-text-style2" rows="6" placeholder="Alışkanlıklarınızı yazınız..."></textarea>
     </div>
-    <div class="box" style="margin-top: 24px;">
-      <button class="cta-button">Analiz</button>
+
+    <div class="box" ></div>
+    <h2>Günlük Etkini Hesapla</h2><Br>
+    <div class="impact-card-container">
+      <div class="impact-card">
+        <img src="../img/gas.png" alt="Araç" />
+        <label for="carKm">Araçla Kaç km Gittin?</label>
+        <input type="number" id="carKm" placeholder="ör. 20" />
+        <span>km</span>
+      </div>
+      <div class="impact-card">
+        <img src="../img/water.png" alt="Su" />
+        <label for="waterUsage">Ne Kadar Su Tüketildi?</label>
+        <input type="number" id="waterUsage" placeholder="ör. 50" />
+        <span>litre</span>
+      </div>
+      <div class="impact-card">
+        <img src="../img/trash.png" alt="Plastik" />
+        <label for="plasticItems">Kaç Adet Plastik Tükettin?</label>
+        <input type="number" id="plasticItems" placeholder="ör. 3" />
+        <span>adet</span>
+      </div>
     </div>
+
+    <div class="impact-header">
+
+      <button class="cta-button" onclick="window.location.href='result.html'">Analiz</button>
+    </div>
+
   </section>
 
 </body>

@@ -10,6 +10,9 @@ from gemini_api import get_gemini_response
 
 app = FastAPI()
 
+app.mount("/static", StaticFiles(directory="Frontend"), name="static")
+templates = Jinja2Templates(directory="Frontend")
+
 @app.post("/calculate")
 async def calculate_carbon_score(
     user_data: UserData,

@@ -1,9 +1,14 @@
-body {
+* {
+  box-sizing: border-box;
   margin: 0;
-  font-family: 'Arial', sans-serif;
-  background-color: #fefefe;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
   display: flex;
   height: 100vh;
+  background: #f5f5f5;
 }
 
 .container {
@@ -11,45 +16,63 @@ body {
   width: 100%;
 }
 
-.left-section {
+.left-panel {
   flex: 1;
   position: relative;
   overflow: hidden;
+  border-radius: 0 40px 40px 0;
 }
 
-.left-section img {
+.left-panel img {
   width: 100%;
+  height: 100%;
   object-fit: cover;
-  border-top-left-radius: 20px;
-  border-bottom-left-radius: 20px;
 }
 
-.text-overlay {
+.overlay-text {
   position: absolute;
-  bottom: 20px;
-  left: 20px;
+  bottom: 30px;
+  left: 30px;
   color: white;
-  font-weight: bold;
-  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
 }
 
-.right-section {
+.overlay-text h1 {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.overlay-text p {
+  font-size: 18px;
+}
+
+.right-panel {
   flex: 1;
+  background: #fff;
   padding: 80px 60px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: #fff;
-  box-sizing: border-box;
-  max-width: 600px;
-  margin: 0 auto;
 }
 
 .logo {
-  font-size: 24px;
-  font-weight: bold;
-  text-align: center;
+  display: flex;
+  align-items: center;
   margin-bottom: 30px;
+}
+
+.logo-icon {
+  font-size: 24px;
+}
+
+.logo-text {
+  font-size: 20px;
+  font-weight: bold;
+  margin-left: 8px;
+}
+
+h2 {
+  font-size: 18px;
+  margin-bottom: 20px;
 }
 
 .toggle-buttons {
@@ -73,46 +96,49 @@ body {
   color: white;
 }
 
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  width: 100%;
+form label {
+  display: block;
+  margin-top: 20px;
+  font-size: 14px;
 }
 
-input {
+form input[type="text"],
+form input[type="password"] {
   width: 100%;
   padding: 10px;
   margin-top: 6px;
   border: 1px solid #ccc;
   border-radius: 6px;
-  box-sizing: border-box;
 }
 
 .password-wrapper {
   position: relative;
-  width: 100%;
-}
-
-.password-wrapper input {
-  padding-right: 40px; /* ikon için yer aç */
-  box-sizing: border-box;
 }
 
 .toggle-password {
   position: absolute;
-  top: 50%;
   right: 12px;
+  top: 50%;
   transform: translateY(-50%);
   cursor: pointer;
 }
 
-.submit-btn {
+.options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+  font-size: 13px;
+}
+
+.login-button {
+  margin-top: 30px;
+  width: 100%;
   padding: 12px;
-  background-color: #b79e7f;
-  color: white;
+  background: #a98f6f;
   border: none;
-  border-radius: 6px;
-  cursor: pointer;
+  color: white;
   font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
 }

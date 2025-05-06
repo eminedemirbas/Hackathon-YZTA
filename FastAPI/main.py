@@ -50,3 +50,23 @@ async def generate_advice(user_data: UserData):
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
+
+
+#Burada bir /predict endpoint’i olacak. Kullanıcıdan metin alır, modeli çağırır, sonucu döner.
+
+"""
+from fastapi import FastAPI, Request
+from pydantic import BaseModel
+from utils.predict import predict_sentiment 
+
+app = FastAPI()
+
+class InputText(BaseModel):
+    text: str
+
+@app.post("/predict")
+async def predict(input_text: InputText):
+    result = predict_sentiment(input_text.text)
+    return {"prediction": result}
+
+"""
